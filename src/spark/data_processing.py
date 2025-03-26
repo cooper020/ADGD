@@ -45,30 +45,32 @@ if __name__ == '__main__':
     print(findspark.find())
     sc = SparkSession.builder.master("local[*]").appName('Spark-ADGD').getOrCreate()
 
-    # 5. Todos os dados para um dataframe novo nd
-    nd = None
+    # 5. Todos os dados para um dataframe novo slurm_nd
+    slurm_nd = sc.read.json(f'{DATADIR}/{f}', multiLine=True)
+    
+    logstash_nd = None
     for root, dirs, files in os.walk(DATADIR):
         for f in files:
-            if f.startswith('slurm') and f.endswith('.json'):
+            if f.startswith('logstash'):
                 data = sc.read.json(f'{DATADIR}/{f}', multiLine=True)
-                if nd is None:
-                    nd = data
+                if logstash_nd is None:
+                    logstash_nd = data
                 else:
-                    nd = nd.union(data)
+                    logstash_nd = logstash_nd.union(data)
 
     # 6. Conta quantos há de cada
-    if nd is not None:
-        params['Total number of jobs'] = nd.count()
+    if slurm_nd is not None:
+        params['Total number of jobs'] = slurm_nd.count()
         estados = ["COMPLETED", "FAILED", "CANCELLED", "TIMEOUT", "OUT_OF_MEMORY", "NODE_FAIL", "PENDING"]
         for estado in estados:
-            count = nd.filter(F.col('_source.state') == estado).count()
+            count = slurm_nd.filter(F.col('_source.state') == estado).count()
             params[f'{estado} jobs'] = count
 
     
-    # nd.printSchema()
+    # slurm_nd.printSchema()
         
     # 7. Valores diferentes dos atributos na struct src
-    selected_data = nd.select(
+    selected_data = slurm_nd.select(
         F.col('_source.state'),
         F.col('_source.cluster'),
         F.col('_source.partition'),
@@ -78,7 +80,7 @@ if __name__ == '__main__':
     # Mostrar os valores distintos
     selected_data.distinct().show(truncate=False)
 
-    nd = nd.withColumn("cluster",
+    slurm_nd = slurm_nd.withColumn("cluster",
         F.when(F.col('Partition').contains("arm"), "ARM")
         .otherwise(
             F.when(F.col('Partition').contains("a100"), "GPU")
