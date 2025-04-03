@@ -47,8 +47,8 @@ if __name__ == '__main__':
     # 5. Carregar os dados para um dataframe
     slurm_nd = sc.read.json(f'{DATADIR}/slurm.json', multiLine=True)
     slurm_nd.printSchema()
-
-    slurm_nd.show(5, truncate=False)
+    # slurm_nd.show(5, truncate=False)
+    slurm_nd = slurm_nd.select(F.col("_source"))
     
     logstash_nd = None
     for root, dirs, files in os.walk(DATADIR):
@@ -60,9 +60,15 @@ if __name__ == '__main__':
                     logstash_nd = data
                 else:
                     logstash_nd = logstash_nd.union(data)
-    logstash_nd.printSchema()
+    logstash_nd.printSchema() 
+    # logstash_nd.show(5, truncate=False)
+    logstash_nd = logstash_nd.select(F.col("_source"))
     
-    logstash_nd.show(5, truncate=False)
+    # Join
+    joined_df = logstash_nd.join(F.broadcast(slurm_nd), slurm_nd["_source.nodes"] == logstash_nd["_source.host"], "inner")
+    joined_df.printSchema
+    joined_df.show(10, truncate=False)
+    
 
     # 6. Conta quantos há de cada
     if slurm_nd is not None:
