@@ -119,33 +119,18 @@ if __name__ == '__main__':
     
 
     # 6. Conta quantos há de cada
-    if slurm_nd is not None:
+    '''if slurm_nd is not None:
         params['Total number of jobs'] = slurm_nd.count()
         estados = ["COMPLETED", "FAILED", "CANCELLED", "TIMEOUT", "OUT_OF_MEMORY", "NODE_FAIL", "PENDING"]
         for estado in estados:
             count = slurm_nd.filter(F.col('_source.state') == estado).count()
             params[f'{estado} jobs'] = count
+    '''
 
-    # 7. Valores diferentes dos atributos na struct src
-    selected_data = slurm_nd.select(
-        F.col('_source.state'),
-        F.col('_source.cluster'),
-        F.col('_source.partition'),
-        F.col('_source.nodes')
-    )
+    # Eliminar colunas desnecessárias
+    cols_to_drop = ["facility", "facility_num", "message", "severity", "syslogtag", "cluster", "derived_ec", "std_in", "std_out"] 
+    job_logs = job_logs.drop(*cols_to_drop)
 
-    # Mostrar os valores distintos
-    selected_data.distinct().show(truncate=False)
-
-    slurm_nd = slurm_nd.withColumn("cluster",
-        F.when(F.col('_source.partition').contains("arm"), "ARM")
-        .otherwise(
-            F.when(F.col('_source.partition').contains("a100"), "GPU")
-            .otherwise("AMD")
-        )
-    )
-
-    
     outfilename = args.outfile if args.outfile else "params.tex"
     with open(f"{OUTDIR}/{outfilename}", "w+") as wfile:
         for key, value in params.items():
@@ -155,6 +140,8 @@ if __name__ == '__main__':
     print(f"Resultados escritos em {OUTDIR}/{outfilename}")
 
     sc.stop()
+
+
 
 
 
