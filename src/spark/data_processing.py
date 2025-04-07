@@ -23,7 +23,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # 2. Diretoria onde vamos bucar os json
-    DATADIR = '/projects/F202500001HPCVLABEPICURE/mca57876/ADGD/DataSets/PRJ'
+    DATADIR = '/projects/F202500001HPCVLABEPICURE/DataSets/PRJ'
     OUTDIR = '/projects/F202500001HPCVLABEPICURE/mca57876/ADGD/TP/outputs'
 
     # 3. Parâmetros para uma contagem do output 
@@ -46,9 +46,6 @@ if __name__ == '__main__':
 
     # 5. Carregar os dados para um dataframe
     slurm_nd = sc.read.json(f'{DATADIR}/slurm.json', multiLine=True)
-    slurm_nd.printSchema()
-    # slurm_nd.show(5, truncate=False)
-    slurm_nd = slurm_nd.select(F.col("_source"))
     
     logstash_nd = None
     for root, dirs, files in os.walk(DATADIR):
@@ -60,14 +57,65 @@ if __name__ == '__main__':
                     logstash_nd = data
                 else:
                     logstash_nd = logstash_nd.union(data)
-    logstash_nd.printSchema() 
-    # logstash_nd.show(5, truncate=False)
-    logstash_nd = logstash_nd.select(F.col("_source"))
     
-    # Join
-    joined_df = logstash_nd.join(F.broadcast(slurm_nd), slurm_nd["_source.nodes"] == logstash_nd["_source.host"], "inner")
-    joined_df.printSchema
-    joined_df.show(10, truncate=False)
+    # Pegar só no que está na coluna source
+    slurm_flattened = slurm_nd.select(
+        F.col("_source.@end").alias("end"),
+        F.col("_source.@queue_wait").alias("queue_wait"),
+        F.col("_source.@start").alias("start"),
+        F.col("_source.@submit").alias("submit"),
+        F.col("_source.cluster").alias("cluster"),
+        F.col("_source.cpu_hours").alias("cpu_hours"),
+        F.col("_source.cpus_per_task").alias("cpus_per_task"),
+        F.col("_source.derived_ec").alias("derived_ec"),
+        F.col("_source.elapsed").alias("elapsed"),
+        F.col("_source.exit_code").alias("exit_code"),
+        F.col("_source.jobid").alias("jobid"),
+        F.col("_source.nodes").alias("nodes"),
+        F.col("_source.ntasks").alias("ntasks"),
+        F.col("_source.partition").alias("partition"),
+        F.col("_source.qos").alias("qos"),
+        F.col("_source.state").alias("state"),
+        F.col("_source.std_in").alias("std_in"),
+        F.col("_source.std_out").alias("std_out"),
+        F.col("_source.time_limit").alias("time_limit"),
+        F.col("_source.total_cpus").alias("total_cpus"),
+        F.col("_source.total_nodes").alias("total_nodes")
+    )
+    
+    # Pegar só no que está na coluna source
+    logstash_flattened = logstash_nd.select(
+        F.col("_source.@timestamp").alias("timestamp"),
+        F.col("_source.facility").alias("facility"),
+        F.col("_source.facility-num").alias("facility_num"),
+        F.col("_source.host").alias("host"),
+        F.col("_source.message").alias("message"),
+        F.col("_source.severity").alias("severity"),
+        F.col("_source.severity-num").alias("severity_num"),
+        F.col("_source.syslogtag").alias("syslogtag")
+    )
+    
+    # Converter strings para o formato de tempo do spark
+    slurm_flattened = slurm_flattened.withColumn("start_time", F.to_timestamp(F.col("start")))
+    slurm_flattened = slurm_flattened.withColumn("end_time", F.to_timestamp(F.col("end")))
+    logstash_flattened = logstash_flattened.withColumn("log_time", F.to_timestamp(F.col("timestamp")))
+    
+    # Criar e explodir uma nova coluna com a lista de nodes usados num job
+    slurm_flattened = slurm_flattened.withColumn("nodes_list", F.split(F.col("nodes"), ","))
+    slurm_exploded = slurm_flattened.withColumn("node", F.explode_outer("nodes_list"))
+    
+    # Juntar os data frames
+    job_logs = logstash_flattened.join(
+        slurm_exploded,
+        (logstash_flattened["host"] == slurm_exploded["node"]) &
+        (logstash_flattened["log_time"] >= slurm_exploded["start_time"]) &
+        (logstash_flattened["log_time"] <= slurm_exploded["end_time"]),
+        "inner"
+    )
+    
+    # Mostrar o esquema e os primeiros registros
+    job_logs.printSchema()
+    job_logs.show(10, truncate=False)
     
 
     # 6. Conta quantos há de cada
