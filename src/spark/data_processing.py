@@ -119,17 +119,19 @@ if __name__ == '__main__':
     
 
     # 6. Conta quantos há de cada
-    '''if slurm_nd is not None:
+    if slurm_nd is not None:
         params['Total number of jobs'] = slurm_nd.count()
         estados = ["COMPLETED", "FAILED", "CANCELLED", "TIMEOUT", "OUT_OF_MEMORY", "NODE_FAIL", "PENDING"]
         for estado in estados:
             count = slurm_nd.filter(F.col('_source.state') == estado).count()
             params[f'{estado} jobs'] = count
-    '''
 
     # Eliminar colunas desnecessárias
     cols_to_drop = ["facility", "facility_num", "message", "severity", "syslogtag", "cluster", "derived_ec", "std_in", "std_out"] 
     job_logs = job_logs.drop(*cols_to_drop)
+    job_logs.printSchema()
+
+    
 
     outfilename = args.outfile if args.outfile else "params.tex"
     with open(f"{OUTDIR}/{outfilename}", "w+") as wfile:
