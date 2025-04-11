@@ -23,8 +23,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # 2. Diretoria onde vamos bucar os json
-    DATADIR = '/projects/F202500001HPCVLABEPICURE/DataSets/PRJ'
-    OUTDIR = '/projects/F202500001HPCVLABEPICURE/mca57876/ADGD/TP/outputs'
+    DATADIR = '/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/DataSets/PRJ'
+    OUTDIR = '/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs'
 
     # 3. Parâmetros para uma contagem do output 
     params = {
