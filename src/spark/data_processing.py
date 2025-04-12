@@ -6,6 +6,8 @@ import findspark
 import pyspark
 from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
+from pyspark.sql.functions import rand
+from pyspark.sql.functions import size
 import argparse
 import calendar
 import os
@@ -29,7 +31,6 @@ if __name__ == '__main__':
     # 3. Parâmetros para uma contagem do output 
     params = {
         'Total number of jobs': 0,
-
         'COMPLETED jobs': 0,
         'FAILED jobs': 0,
         'CANCELLED jobs': 0,
@@ -40,8 +41,6 @@ if __name__ == '__main__':
     }
 
     # 4. Criar a sessão spark para processar tudo paralelamente
-    print("FIND SPARK")
-    print(findspark.find())
     sc = SparkSession.builder.master("local[*]").appName('Spark-ADGD').getOrCreate()
 
     # 5. Carregar os dados para um dataframe
@@ -94,6 +93,9 @@ if __name__ == '__main__':
         F.col("_source.severity-num").alias("severity_num"),
         F.col("_source.syslogtag").alias("syslogtag")
     )
+
+    slurm_flattened.orderBy(rand()).show(10, truncate=False)
+    logstash_flattened.orderBy(rand()).show(10, truncate=False)
     
     # Converter strings para o formato de tempo do spark
     slurm_flattened = slurm_flattened.withColumn("start_time", F.to_timestamp(F.col("start")))
@@ -112,11 +114,6 @@ if __name__ == '__main__':
         (logstash_flattened["log_time"] <= slurm_exploded["end_time"]),
         "inner"
     )
-    
-    # Mostrar o esquema e os primeiros registros
-    job_logs.printSchema()
-    job_logs.show(10, truncate=False)
-    
 
     # 6. Conta quantos há de cada
     if slurm_nd is not None:
@@ -126,19 +123,20 @@ if __name__ == '__main__':
             count = slurm_nd.filter(F.col('_source.state') == estado).count()
             params[f'{estado} jobs'] = count
 
-    # Eliminar colunas desnecessárias
-    cols_to_drop = ["facility", "facility_num", "message", "severity", "syslogtag", "cluster", "derived_ec", "std_in", "std_out"] 
-    job_logs = job_logs.drop(*cols_to_drop)
-    job_logs.printSchema()
+    # Criar coluna total_cpus_job, que nos revela quantos cpus foram utilizados no total naquele job.
+    job_logs = job_logs.withColumn("total_cpus_job", F.col("ntasks") * F.col("cpus_per_task"))
 
-    
+    # Eliminar colunas desnecessárias
+    cols_to_drop = ["facility", "facility_num", "message", "severity", "syslogtag", "cluster", "derived_ec", "std_in", "std_out", "total_cpus", "cpus_per_task"] 
+    job_logs = job_logs.drop(*cols_to_drop)
+
+    # Mostrar 20 linhas aleatórias
+    #job_logs.orderBy(rand()).show(50, truncate=False)
 
     outfilename = args.outfile if args.outfile else "params.tex"
     with open(f"{OUTDIR}/{outfilename}", "w+") as wfile:
         for key, value in params.items():
             wfile.write(f"{key}: {value}\n")
-
-
     print(f"Resultados escritos em {OUTDIR}/{outfilename}")
 
     sc.stop()
