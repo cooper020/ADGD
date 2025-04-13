@@ -94,8 +94,6 @@ if __name__ == '__main__':
         F.col("_source.syslogtag").alias("syslogtag")
     )
 
-    slurm_flattened.orderBy(rand()).show(10, truncate=False)
-    logstash_flattened.orderBy(rand()).show(10, truncate=False)
     
     # Converter strings para o formato de tempo do spark
     slurm_flattened = slurm_flattened.withColumn("start_time", F.to_timestamp(F.col("start")))
@@ -131,7 +129,7 @@ if __name__ == '__main__':
     job_logs = job_logs.drop(*cols_to_drop)
 
     # Mostrar 20 linhas aleatórias
-    #job_logs.orderBy(rand()).show(50, truncate=False)
+    job_logs.orderBy(rand()).show(50, truncate=False)
 
     outfilename = args.outfile if args.outfile else "params.tex"
     with open(f"{OUTDIR}/{outfilename}", "w+") as wfile:
