@@ -14,6 +14,43 @@ import os
 import time
 from datetime import date, timedelta, datetime, time
 
+from pyspark.sql.functions import udf
+from pyspark.sql.types import ArrayType, StringType
+
+# Define a função que expande os nodes
+def expand_all_nodes(nodes_str):
+    if not nodes_str or nodes_str.strip() == "":
+        return []
+
+    import re
+    result = []
+    parts = re.split(r',(?![^\[]*\])', nodes_str)
+
+    for part in parts:
+        match = re.match(r'([a-zA-Z0-9_\-]+)(?:\[(.*?)\])?$', part.strip())
+        if not match:
+            continue
+
+        prefix, inside = match.groups()
+
+        if inside:
+            segments = inside.split(',')
+            for seg in segments:
+                if '-' in seg:
+                    start, end = map(int, seg.split('-'))
+                    width = max(len(seg.split('-')[0]), len(seg.split('-')[1]))
+                    for i in range(start, end + 1):
+                        result.append(f"{prefix}{str(i).zfill(width)}")
+                else:
+                    result.append(f"{prefix}{seg.zfill(len(seg))}")
+        else:
+            result.append(prefix)
+
+    return result
+
+# Registar UDF
+expand_all_nodes_udf = udf(expand_all_nodes, ArrayType(StringType()))
+
 # Vai bsucar a instalação do spark
 findspark.init()
 
@@ -81,6 +118,7 @@ if __name__ == '__main__':
         F.col("_source.total_cpus").alias("total_cpus"),
         F.col("_source.total_nodes").alias("total_nodes")
     )
+
     
     # Pegar só no que está na coluna source
     logstash_flattened = logstash_nd.select(
@@ -100,16 +138,15 @@ if __name__ == '__main__':
     slurm_flattened = slurm_flattened.withColumn("end_time", F.to_timestamp(F.col("end")))
     logstash_flattened = logstash_flattened.withColumn("log_time", F.to_timestamp(F.col("timestamp")))
     
-    # Criar e explodir uma nova coluna com a lista de nodes usados num job
-    slurm_flattened = slurm_flattened.withColumn("nodes_list", F.split(F.col("nodes"), ","))
-    slurm_exploded = slurm_flattened.withColumn("node", F.explode_outer("nodes_list"))
+    # Criar uma nova coluna com a lista de nodes usados num job
+    slurm_flattened = slurm_flattened.withColumn("nodes_list", expand_all_nodes_udf(F.col("nodes")))
     
     # Juntar os data frames
     job_logs = logstash_flattened.join(
-        slurm_exploded,
-        (logstash_flattened["host"] == slurm_exploded["node"]) &
-        (logstash_flattened["log_time"] >= slurm_exploded["start_time"]) &
-        (logstash_flattened["log_time"] <= slurm_exploded["end_time"]),
+        slurm_flattened,
+        (F.expr("array_contains(nodes_list, host)")) &
+        (logstash_flattened["log_time"] >= slurm_flattened["start_time"]) &
+        (logstash_flattened["log_time"] <= slurm_flattened["end_time"]),
         "inner"
     )
 
@@ -129,7 +166,7 @@ if __name__ == '__main__':
     job_logs = job_logs.drop(*cols_to_drop)
 
     # Mostrar 20 linhas aleatórias
-    job_logs.orderBy(rand()).show(50, truncate=False)
+    job_logs.show(20, truncate=False)
 
     outfilename = args.outfile if args.outfile else "params.tex"
     with open(f"{OUTDIR}/{outfilename}", "w+") as wfile:
