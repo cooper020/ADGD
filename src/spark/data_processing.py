@@ -13,6 +13,7 @@ import calendar
 import os
 import time
 from datetime import date, timedelta, datetime, time
+from collections import defaultdict
 
 from pyspark.sql.functions import udf
 from pyspark.sql.types import ArrayType, StringType
@@ -96,6 +97,8 @@ if __name__ == '__main__':
                 else:
                     logstash_nd = logstash_nd.union(data)
     
+    logstash_nd = logstash_nd.persist()
+
     # Pegar só no que está na coluna source
     slurm_flattened = slurm_nd.select(
         F.col("_source.@end").alias("end"),
@@ -119,7 +122,7 @@ if __name__ == '__main__':
         F.col("_source.time_limit").alias("time_limit"),
         F.col("_source.total_cpus").alias("total_cpus"),
         F.col("_source.total_nodes").alias("total_nodes")
-    )
+    ).persist()
 
     # Pegar só no que está na coluna source
     logstash_flattened = logstash_nd.select(
@@ -131,17 +134,21 @@ if __name__ == '__main__':
         F.col("_source.severity").alias("severity"),
         F.col("_source.severity-num").alias("severity_num"),
         F.col("_source.syslogtag").alias("syslogtag")
-    )
+    ).persist()
 
     
     # Converter strings para o formato de tempo do spark
-    slurm_flattened = slurm_flattened.withColumn("start_time", F.to_timestamp(F.col("start")))
-    slurm_flattened = slurm_flattened.withColumn("end_time", F.to_timestamp(F.col("end")))
-    logstash_flattened = logstash_flattened.withColumn("log_time", F.to_timestamp(F.col("timestamp")))
+    slurm_flattened = slurm_flattened \
+        .withColumn("start_time", F.to_timestamp("start")) \
+        .withColumn("end_time", F.to_timestamp("end")) \
+        .withColumn("nodes_list", expand_all_nodes_udf(F.col("nodes")))
+
+    logstash_flattened = logstash_flattened.withColumn("log_time", F.to_timestamp("timestamp"))
     
-    # Criar uma nova coluna com a lista de nodes usados num job
-    slurm_flattened = slurm_flattened.withColumn("nodes_list", expand_all_nodes_udf(F.col("nodes")))
-    
+    # Reparticionar antes do join para distribuir melhor os dados
+    slurm_flattened = slurm_flattened.repartition(100)
+    logstash_flattened = logstash_flattened.repartition(100, "host")
+
     # Juntar os data frames
     job_logs = logstash_flattened.join(
         slurm_flattened,
@@ -151,6 +158,12 @@ if __name__ == '__main__':
         "inner"
     )
 
+    # Libertar memória de DataFrames já usados
+    logstash_nd.unpersist()
+    slurm_flattened.unpersist()
+    logstash_flattened.unpersist()
+    del logstash_nd, slurm_flattened, logstash_flattened
+
     # 6. Conta quantos há de cada
     if slurm_nd is not None:
         params['Total number of jobs'] = slurm_nd.count()
@@ -158,6 +171,9 @@ if __name__ == '__main__':
         for estado in estados:
             count = slurm_nd.filter(F.col('_source.state') == estado).count()
             params[f'{estado} jobs'] = count
+
+    slurm_nd.unpersist()
+    del slurm_nd
 
     # Criar coluna total_cpus_job, que nos revela quantos cpus foram utilizados no total naquele job.
     job_logs = job_logs.withColumn("total_cpus_job", F.col("ntasks") * F.col("cpus_per_task"))
