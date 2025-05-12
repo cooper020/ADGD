@@ -59,6 +59,8 @@ if __name__ == '__main__':
     # 1. Definir argumentos para personalizar por exemplo o período de análise
     parser = argparse.ArgumentParser()
     parser.add_argument("-o", "--outfile", nargs='?', help="outfile")
+    parser.add_argument("-p", "--parquet_path", nargs='?', help="Path to save/load Parquet files", default="/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs")
+    parser.add_argument("--load_parquet", action="store_true", help="Load data from Parquet instead of JSON")
     args = parser.parse_args()
 
     # 2. Diretoria onde vamos bucar os json
@@ -119,7 +121,6 @@ if __name__ == '__main__':
         F.col("_source.total_nodes").alias("total_nodes")
     )
 
-    
     # Pegar só no que está na coluna source
     logstash_flattened = logstash_nd.select(
         F.col("_source.@timestamp").alias("timestamp"),
@@ -168,6 +169,23 @@ if __name__ == '__main__':
     # Mostrar 20 linhas aleatórias
     job_logs.show(20, truncate=False)
 
+    if not args.load_parquet:
+        # Criar diretório de saída se não existir
+        os.makedirs(args.parquet_path, exist_ok=True)
+
+        # Consolidar partições antes de gravar
+        job_logs_final = job_logs.repartition(10)  # ou um número pequeno como 10
+        
+        print("DEBUG :: Fiz a repartição")
+
+        # Gravação otimizada do job_logs
+        job_logs_final.write.mode("overwrite").parquet(f'{args.parquet_path}/job_logs')
+
+        # Log de diagnóstico
+        print(f"Número de partições de job_logs: {job_logs.rdd.getNumPartitions()}")
+        print(f"Total de registros em job_logs: {job_logs.count()}")
+
+    # Gravar parâmetros
     outfilename = args.outfile if args.outfile else "params.tex"
     with open(f"{OUTDIR}/{outfilename}", "w+") as wfile:
         for key, value in params.items():
@@ -175,8 +193,3 @@ if __name__ == '__main__':
     print(f"Resultados escritos em {OUTDIR}/{outfilename}")
 
     sc.stop()
-
-
-
-
-
