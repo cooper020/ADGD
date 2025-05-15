@@ -4,6 +4,7 @@ import sys
 
 import findspark
 import pyspark
+from pyspark import StorageLevel
 from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
 from pyspark.sql.functions import rand
@@ -17,6 +18,7 @@ from collections import defaultdict
 
 from pyspark.sql.functions import udf
 from pyspark.sql.types import ArrayType, StringType
+from pyspark.sql.functions import broadcast
 
 # Define a função que expande os nodes
 def expand_all_nodes(nodes_str):
@@ -97,7 +99,7 @@ if __name__ == '__main__':
                 else:
                     logstash_nd = logstash_nd.union(data)
     
-    logstash_nd = logstash_nd.persist()
+    logstash_nd = logstash_nd.persist(StorageLevel.MEMORY_AND_DISK)
 
     # Pegar só no que está na coluna source
     slurm_flattened = slurm_nd.select(
@@ -122,7 +124,7 @@ if __name__ == '__main__':
         F.col("_source.time_limit").alias("time_limit"),
         F.col("_source.total_cpus").alias("total_cpus"),
         F.col("_source.total_nodes").alias("total_nodes")
-    ).persist()
+    ).persist(StorageLevel.MEMORY_AND_DISK)
 
     # Pegar só no que está na coluna source
     logstash_flattened = logstash_nd.select(
@@ -134,7 +136,7 @@ if __name__ == '__main__':
         F.col("_source.severity").alias("severity"),
         F.col("_source.severity-num").alias("severity_num"),
         F.col("_source.syslogtag").alias("syslogtag")
-    ).persist()
+    ).persist(StorageLevel.MEMORY_AND_DISK)
 
     
     # Converter strings para o formato de tempo do spark
@@ -151,7 +153,7 @@ if __name__ == '__main__':
 
     # Juntar os data frames
     job_logs = logstash_flattened.join(
-        slurm_flattened,
+        broadcast(slurm_flattened),
         (F.expr("array_contains(nodes_list, host)")) &
         (logstash_flattened["log_time"] >= slurm_flattened["start_time"]) &
         (logstash_flattened["log_time"] <= slurm_flattened["end_time"]),

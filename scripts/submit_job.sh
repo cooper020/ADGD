@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=spark-pi      # create a short name for your job
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=4
-#SBATCH --time=00:55:00          # total run time limit (HH:MM:SS)
+#SBATCH --nodes=10                
+#SBATCH --ntasks-per-node=10      
+#SBATCH --time=00:20:00          # total run time limit (HH:MM:SS)
 #SBATCH --account=F202500001HPCVLABEPICUREa
 #SBATCH --partition=normal-arm
 #SBATCH --output=start_client.out  # std out
@@ -19,9 +19,8 @@ module load "Python/3.12.3-GCCcore-13.3.0"
 # Remember to change this to the actual path
 export SPARK_HOME="/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/spark-3.5.5-bin-hadoop3"
 
-# Add to the global PATH
+# Add to the global PATHc
 export PATH="${SPARK_HOME}/bin:${PATH}"
-
 
 # Get the master node, which will be the first node from the command `scontrol show hostnames`
 master_node="cna0563"
@@ -30,4 +29,6 @@ master_node="cna0563"
 # In this script we submit a provided example in the spark directory
 $SPARK_HOME/bin/spark-submit \
     --master spark://${master_node}:7077 \
+    --num-executors 10 \
+    --executor-cores 10 \
     /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/src/spark/data_processing.py
