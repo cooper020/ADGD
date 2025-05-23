@@ -184,17 +184,12 @@ if __name__ == '__main__':
     cols_to_drop = ["facility", "facility_num", "message", "severity", "syslogtag", "cluster", "derived_ec", "std_in", "std_out", "total_cpus", "cpus_per_task"] 
     job_logs = job_logs.drop(*cols_to_drop)
 
-    # Mostrar 20 linhas aleatórias
-    job_logs.show(20, truncate=False)
-
     if not args.load_parquet:
         # Criar diretório de saída se não existir
         os.makedirs(args.parquet_path, exist_ok=True)
 
         # Consolidar partições antes de gravar
         job_logs_final = job_logs.repartition(10)  # ou um número pequeno como 10
-        
-        print("DEBUG :: Fiz a repartição")
 
         # Gravação otimizada do job_logs
         job_logs_final.write.mode("overwrite").parquet(f'{args.parquet_path}/job_logs')

@@ -14,10 +14,6 @@ module purge
 module load "Java/17.0.6"
 module load "Python/3.12.3-GCCcore-13.3.0"
 
-source /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/bin/activate
-
-export LD_LIBRARY_PATH="/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib64/python3.6/site-packages/torch/lib:$LD_LIBRARY_PATH"
-
 # This is basically the same steps as seen in the first subchapter
 
 # Remember to change this to the actual path

@@ -1,0 +1,7 @@
+[Pipeline] Iniciando o processamento dos dados com Spark...
+Número de partições de job_logs: 100
+Total de registros em job_logs: 2620
+Resultados escritos em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/params.tex
+[Pipeline] Processamento de dados concluído com sucesso.
+[Pipeline] Iniciando o treinamento distribuído com PyTorch...
+[Pipeline] Erro no treinamento com PyTorch. Encerrando pipeline.
