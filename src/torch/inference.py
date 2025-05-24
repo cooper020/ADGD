@@ -7,7 +7,6 @@ import torch
 import torch.nn as nn
 from sklearn.preprocessing import StandardScaler
 
-# Mesmo modelo utilizado no treinamento
 class MLPModel(nn.Module):
     def __init__(self, input_dim, hidden_dim=64, output_dim=7):
         super(MLPModel, self).__init__()
@@ -32,14 +31,13 @@ def main():
                         help="Caminho para salvar as previsões")
     args = parser.parse_args()
 
-    # Carrega os dados de entrada
     try:
         df = pd.read_parquet(args.input_path)
     except Exception as e:
         print("Erro ao carregar os dados para inferência:", e)
         return
 
-    # Supondo que os mesmos features são usados
+    #  Verificar se não se perderam features
     features = ["elapsed", "ntasks", "time_limit", "total_nodes", "total_cpus_job"]
     if not all(feature in df.columns for feature in features):
         print("Os dados de entrada não possuem todos os features necessários.")
@@ -49,7 +47,7 @@ def main():
 
     # É importante aplicar a mesma normalização utilizada no treinamento
     scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X)  # Idealmente use os parâmetros salvos do scaler
+    X_scaled = scaler.fit_transform(X) 
 
     # Define e carrega o modelo treinado
     input_dim = X.shape[1]
