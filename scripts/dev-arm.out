@@ -1,0 +1,132 @@
+
+----------------------------------------------------------------------------
+  Python:
+----------------------------------------------------------------------------
+    Description:
+      Python is a programming language that lets you work more quickly and
+      integrate your systems more effectively.
+
+     Versions:
+        Python/2.7.16-GCCcore-8.3.0
+        Python/2.7.18-GCCcore-11.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0
+        Python/3.10.4-GCCcore-11.3.0-bare
+        Python/3.10.4-GCCcore-11.3.0
+        Python/3.11.3-GCCcore-12.3.0
+        Python/3.11.5-GCCcore-13.2.0
+        Python/3.12.3-GCCcore-13.3.0
+     Other possible modules matches:
+        Python-bundle-PyPI  meson-python  protobuf-python
+
+----------------------------------------------------------------------------
+  To find other possible module matches execute:
+
+      $ module -r spider '.*Python.*'
+
+----------------------------------------------------------------------------
+  For detailed information about a specific "Python" package (including how to load the modules) use the module's full name.
+  Note that names that have a trailing (E) are extensions provided by other modules.
+  For example:
+
+     $ module spider Python/3.12.3-GCCcore-13.3.0
+----------------------------------------------------------------------------
+
+ 
+
+>>> Python carregado: /eb/aarch64/software/Python/3.12.3-GCCcore-13.3.0/bin/python (Python 3.12.3)
+
+Currently Loaded Modules:
+  1) GCCcore/13.3.0                   7) Tcl/8.6.14-GCCcore-13.3.0
+  2) zlib/1.3.1-GCCcore-13.3.0        8) SQLite/3.45.3-GCCcore-13.3.0
+  3) binutils/2.42-GCCcore-13.3.0     9) XZ/5.4.5-GCCcore-13.3.0
+  4) bzip2/1.0.8-GCCcore-13.3.0      10) libffi/3.4.5-GCCcore-13.3.0
+  5) ncurses/6.5-GCCcore-13.3.0      11) OpenSSL/1.1
+  6) libreadline/8.2-GCCcore-13.3.0  12) Python/3.12.3-GCCcore-13.3.0
+
+ 
+
+>>> Virtualenv ativo: /home/mca57876/venv/arm_torch/bin/python (Python 3.12.3)
+Requirement already satisfied: pip in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (25.1.1)
+Requirement already satisfied: setuptools in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (80.9.0)
+Requirement already satisfied: wheel in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.45.1)
+Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/arm64
+Requirement already satisfied: torch in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.7.0)
+Requirement already satisfied: torchvision in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.22.0)
+Requirement already satisfied: filelock in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.18.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (4.13.2)
+Requirement already satisfied: setuptools in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (80.9.0)
+Requirement already satisfied: sympy>=1.13.3 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.5)
+Requirement already satisfied: jinja2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (2025.5.1)
+Requirement already satisfied: numpy in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torchvision) (2.2.6)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torchvision) (11.2.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from jinja2->torch) (3.0.2)
+Requirement already satisfied: pandas in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.2.3)
+Requirement already satisfied: scikit-learn in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (1.6.1)
+Requirement already satisfied: tqdm in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (4.67.1)
+Requirement already satisfied: numpy>=1.26.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2.2.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: scipy>=1.6.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (1.15.3)
+Requirement already satisfied: joblib>=1.2.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (1.5.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Collecting pyarrow
+  Downloading pyarrow-20.0.0-cp312-cp312-manylinux_2_28_aarch64.whl.metadata (3.3 kB)
+Collecting fastparquet
+  Downloading fastparquet-2024.11.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.2 kB)
+Requirement already satisfied: pandas>=1.5.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.2.3)
+Requirement already satisfied: numpy in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.2.6)
+Collecting cramjam>=2.3 (from fastparquet)
+  Downloading cramjam-2.10.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (5.0 kB)
+Requirement already satisfied: fsspec in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2025.5.1)
+Collecting packaging (from fastparquet)
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2025.2)
+Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas>=1.5.0->fastparquet) (1.17.0)
+Downloading pyarrow-20.0.0-cp312-cp312-manylinux_2_28_aarch64.whl (40.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.7/40.7 MB 20.7 MB/s eta 0:00:00
+Downloading fastparquet-2024.11.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 4.4 MB/s eta 0:00:00
+Downloading cramjam-2.10.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 9.8 MB/s eta 0:00:00
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Installing collected packages: pyarrow, packaging, cramjam, fastparquet
+
+Successfully installed cramjam-2.10.0 fastparquet-2024.11.0 packaging-25.0 pyarrow-20.0.0
+=== DEBUG PYTORCH ===
+Torch version: 2.7.0+cpu
+CUDA available: False
+=====================
+Cenas de exports
+SJN: cna0001
+Nodes: cna0001
+Head node IP: 10.1.1.1
+DEBUG :: 6
+Epoch [1/10] - Treinamento: Loss: 1.7554, Accuracy: 50.34%
+           Validação:   Loss: 1.6523, Accuracy: 75.76%
+Epoch [2/10] - Treinamento: Loss: 1.5090, Accuracy: 75.44%
+           Validação:   Loss: 1.4326, Accuracy: 76.53%
+Epoch [3/10] - Treinamento: Loss: 1.3109, Accuracy: 75.10%
+           Validação:   Loss: 1.2513, Accuracy: 73.09%
+Epoch [4/10] - Treinamento: Loss: 1.1529, Accuracy: 72.46%
+           Validação:   Loss: 1.1027, Accuracy: 73.09%
+Epoch [5/10] - Treinamento: Loss: 1.0279, Accuracy: 71.78%
+           Validação:   Loss: 0.9896, Accuracy: 72.52%
+Epoch [6/10] - Treinamento: Loss: 0.9312, Accuracy: 71.58%
+           Validação:   Loss: 0.9062, Accuracy: 72.52%
+Epoch [7/10] - Treinamento: Loss: 0.8631, Accuracy: 71.97%
+           Validação:   Loss: 0.8468, Accuracy: 72.52%
+Epoch [8/10] - Treinamento: Loss: 0.8154, Accuracy: 72.17%
+           Validação:   Loss: 0.8021, Accuracy: 74.62%
+Epoch [9/10] - Treinamento: Loss: 0.7699, Accuracy: 74.61%
+           Validação:   Loss: 0.7672, Accuracy: 75.19%
+Epoch [10/10] - Treinamento: Loss: 0.7360, Accuracy: 74.90%
+           Validação:   Loss: 0.7408, Accuracy: 75.19%
+Modelo salvo em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/pytorch_model.pt

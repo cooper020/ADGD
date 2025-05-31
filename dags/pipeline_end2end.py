@@ -3,7 +3,7 @@ from airflow.operators.bash_operator import BashOperator
 from datetime import datetime
 
 default_args = {
-    'start_date': datetime(2023, 1, 1),  # ajuste a data conforme necessário
+    'start_date': datetime(2025, 5, 5), 
 }
 
 dag = DAG('pipeline_end_to_end', default_args=default_args, schedule_interval=None, catchup=False)
@@ -41,5 +41,4 @@ inference_task = BashOperator(
     dag=dag
 )
 
-# Definindo a ordem das tarefas
 spark_task >> torch_train_task >> inference_task

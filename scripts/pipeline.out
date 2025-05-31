@@ -1,16 +1,9 @@
-=== DEBUG INFO ===
-Python version: Python 3.6.8
-Python path: /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/bin/python
-PyTorch version: PyTorch não disponível
-Torchrun available: No
-==================
-SJN: cna[1151-1160]
-Nodes: cna1151 cna1152 cna1153 cna1154 cna1155 cna1156 cna1157 cna1158 cna1159 cna1160
-Head node IP: 10.1.5.151
-MASTER_ADDR: 10.1.5.151
+SJN: cnx032
+Nodes: cnx032
+Head node IP: 10.2.1.32
+MASTER_ADDR: 10.2.1.32
 MASTER_PORT: 29500
-WORLD_SIZE: 100
+WORLD_SIZE: 1
 SLURM_RANK: 0
 SLURM_LOCALID: 0
 [Pipeline] Torch -> Iniciando o treinamento distribuído
-[Pipeline] Torch -> Erro no treinamento. Encerrando pipeline.

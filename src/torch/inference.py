@@ -37,7 +37,6 @@ def main():
         print("Erro ao carregar os dados para inferência:", e)
         return
 
-    #  Verificar se não se perderam features
     features = ["elapsed", "ntasks", "time_limit", "total_nodes", "total_cpus_job"]
     if not all(feature in df.columns for feature in features):
         print("Os dados de entrada não possuem todos os features necessários.")
@@ -45,11 +44,11 @@ def main():
 
     X = df[features].values
 
-    # É importante aplicar a mesma normalização utilizada no treinamento
+
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X) 
 
-    # Define e carrega o modelo treinado
+
     input_dim = X.shape[1]
     model = MLPModel(input_dim=input_dim)
     try:
@@ -65,7 +64,6 @@ def main():
         outputs = model(inputs)
         _, predictions = torch.max(outputs, dim=1)
 
-    # Salva as previsões
     df["prediction"] = predictions.numpy()
     df.to_csv(args.output_path, index=False)
     print(f"Previsões salvas em {args.output_path}")

@@ -1,0 +1,5 @@
+DEBUG:__main__:MASTER_ADDR: cna0001.deucalion.macc.fccn.pt
+DEBUG:__main__:MASTER_PORT: 39199
+DEBUG:__main__:World Size: 1, Rank: 0, Local Rank: 0
+DEBUG:__main__:Grupo distribuído iniciado: Rank 0 de 1
+DEBUG:__main__:Utilizando dispositivo: cpu
