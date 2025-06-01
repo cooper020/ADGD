@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name=pipeline_end2end
-#SBATCH --nodes=2
+#SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --partition=dev-x86
 #SBATCH --account=F202500001HPCVLABEPICUREx
 #SBATCH --time=00:20:00
-#SBATCH --output=pipeline2.out
-#SBATCH --error=pipeline2.err
+#SBATCH --output=pipeline_dev_x86.out
+#SBATCH --error=pipeline_dev_x86.err
 
 pipeline_start=$(date +%s)
 
@@ -15,17 +15,11 @@ module purge
 module spider Python  
 module load "Python/3.12.3-GCCcore-13.3.0"
 module load "Java/17.0.6"
-module list
 
-VENV_DIR=$HOME/venv/arm_torch
-if [ ! -d "$VENV_DIR" ]; then
-  python -m venv "$VENV_DIR"
-fi
-source "$VENV_DIR/bin/activate"
+source /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/bin/activate
 
 python -m pip install --upgrade pip setuptools wheel
-python -m pip install torch torchvision \
-   --extra-index-url https://download.pytorch.org/whl/arm64
+python -m pip install torch torchvision  
 python -m pip install pandas scikit-learn tqdm   
 python -m pip install pyarrow fastparquet matplotlib seaborn
 python -m pip install findspark
@@ -40,8 +34,8 @@ head_node_ip=$(srun --nodes=1 --ntasks=1 hostname --ip-address | uniq)
 echo "Head node IP: $head_node_ip"
 
 export WORLD_SIZE=$SLURM_NTASKS
-#  export RANK=$SLURM_PROCID
-#  export LOCAL_RANK=$SLURM_LOCALID
+export RANK=$SLURM_PROCID
+export LOCAL_RANK=$SLURM_LOCALID
 
 export MASTER_ADDR=$head_node_ip
 export MASTER_PORT=29500
@@ -53,7 +47,7 @@ echo "Running Spark..."
 spark_start=$(date +%s)
 $SPARK_HOME/bin/spark-submit \
     --master spark://$head_node_ip:7077 \
-    --num-executors 4 \
+    --num-executors 128 \
     --executor-cores 1 \
     /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/src/spark/data_processing.py
 
@@ -79,7 +73,6 @@ srun --nodes=1 --ntasks=1 torchrun \
     --learning_rate 0.001
 torch_end=$(date +%s)
 echo "Torch runtime: $((torch_end - torch_start)) seconds"   
-
 
 echo "Running Inference..."
 inference_start=$(date +%s)

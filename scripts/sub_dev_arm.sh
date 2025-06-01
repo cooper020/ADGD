@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name=pipeline_end2end
-#SBATCH --nodes=2
+#SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --partition=dev-arm
 #SBATCH --account=F202500001HPCVLABEPICUREa
 #SBATCH --time=00:20:00
-#SBATCH --output=pipeline.out
-#SBATCH --error=pipeline.err
+#SBATCH --output=pipeline_dev_arm.out
+#SBATCH --error=pipeline_dev_arm.err
 
 pipeline_start=$(date +%s)
 
@@ -52,7 +52,7 @@ echo "Running Spark..."
 spark_start=$(date +%s)
 $SPARK_HOME/bin/spark-submit \
     --master spark://$head_node_ip:7077 \
-    --num-executors 4 \
+    --num-executors 128 \
     --executor-cores 1 \
     /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/src/spark/data_processing.py
 

@@ -1,0 +1,122 @@
+
+----------------------------------------------------------------------------
+  Python:
+----------------------------------------------------------------------------
+    Description:
+      Python is a programming language that lets you work more quickly and
+      integrate your systems more effectively.
+
+     Versions:
+        Python/2.7.16-GCCcore-8.3.0
+        Python/2.7.18-GCCcore-11.3.0-bare
+        Python/2.7.18-GCCcore-12.3.0-bare
+        Python/2.7.18-GCCcore-12.3.0
+        Python/2.7.18-GCCcore-13.3.0
+        Python/3.9.5-GCCcore-10.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0
+        Python/3.10.4-GCCcore-11.3.0-bare
+        Python/3.10.4-GCCcore-11.3.0
+        Python/3.11.3-GCCcore-12.3.0
+        Python/3.11.5-GCCcore-13.2.0
+        Python/3.12.3-GCCcore-13.3.0
+     Other possible modules matches:
+        Biopython  GitPython  IPython  Python-bundle-PyPI  flatbuffers-python  ...
+
+----------------------------------------------------------------------------
+  To find other possible module matches execute:
+
+      $ module -r spider '.*Python.*'
+
+----------------------------------------------------------------------------
+  For detailed information about a specific "Python" package (including how to load the modules) use the module's full name.
+  Note that names that have a trailing (E) are extensions provided by other modules.
+  For example:
+
+     $ module spider Python/3.12.3-GCCcore-13.3.0
+----------------------------------------------------------------------------
+
+ 
+
+Requirement already satisfied: pip in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (21.3.1)
+Requirement already satisfied: setuptools in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (59.6.0)
+Requirement already satisfied: wheel in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (0.37.1)
+Requirement already satisfied: torch in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (1.10.2)
+Requirement already satisfied: torchvision in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (0.11.3)
+Requirement already satisfied: typing-extensions in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from torch) (4.1.1)
+Requirement already satisfied: dataclasses in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from torch) (0.8)
+Requirement already satisfied: pillow!=8.3.0,>=5.3.0 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from torchvision) (8.4.0)
+Requirement already satisfied: numpy in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from torchvision) (1.19.5)
+Requirement already satisfied: pandas in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (1.1.5)
+Requirement already satisfied: scikit-learn in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (0.24.2)
+Requirement already satisfied: tqdm in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (4.64.1)
+Requirement already satisfied: python-dateutil>=2.7.3 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: numpy>=1.15.4 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from pandas) (1.19.5)
+Requirement already satisfied: pytz>=2017.2 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from pandas) (2025.2)
+Requirement already satisfied: joblib>=0.11 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from scikit-learn) (1.1.1)
+Requirement already satisfied: scipy>=0.19.1 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from scikit-learn) (1.5.4)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from scikit-learn) (3.1.0)
+Requirement already satisfied: importlib-resources in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from tqdm) (5.4.0)
+Requirement already satisfied: six>=1.5 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from python-dateutil>=2.7.3->pandas) (1.17.0)
+Requirement already satisfied: zipp>=3.1.0 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from importlib-resources->tqdm) (3.6.0)
+Requirement already satisfied: pyarrow in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (6.0.1)
+Collecting fastparquet
+  Using cached fastparquet-0.8.0.tar.gz (400 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: matplotlib in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (3.3.4)
+Requirement already satisfied: seaborn in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (0.11.2)
+Requirement already satisfied: numpy>=1.16.6 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from pyarrow) (1.19.5)
+Requirement already satisfied: pandas>=1.1.0 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from fastparquet) (1.1.5)
+Requirement already satisfied: cramjam>=2.3.0 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from fastparquet) (2.5.0)
+Requirement already satisfied: fsspec in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from fastparquet) (2022.1.0)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from matplotlib) (3.1.4)
+Requirement already satisfied: kiwisolver>=1.0.1 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from matplotlib) (1.3.1)
+Requirement already satisfied: pillow>=6.2.0 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from matplotlib) (8.4.0)
+Requirement already satisfied: python-dateutil>=2.1 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: cycler>=0.10 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from matplotlib) (0.11.0)
+Requirement already satisfied: scipy>=1.0 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from seaborn) (1.5.4)
+Requirement already satisfied: pytz>=2017.2 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from pandas>=1.1.0->fastparquet) (2025.2)
+Requirement already satisfied: six>=1.5 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib) (1.17.0)
+Building wheels for collected packages: fastparquet
+  Building wheel for fastparquet (setup.py): started
+  Building wheel for fastparquet (setup.py): finished with status 'error'
+  Running setup.py clean for fastparquet
+Failed to build fastparquet
+Installing collected packages: fastparquet
+    Running setup.py install for fastparquet: started
+    Running setup.py install for fastparquet: finished with status 'error'
+Requirement already satisfied: findspark in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (2.0.1)
+Requirement already satisfied: pyspark in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (3.2.4)
+Requirement already satisfied: py4j==0.10.9.5 in /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/lib/python3.6/site-packages (from pyspark) (0.10.9.5)
+SJN: cnx001
+Nodes: cnx001
+Head node IP: 10.2.1.1
+Running Spark...
+Resultados escritos em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/params.tex
+Spark runtime: 189 seconds
+Running Torch...
+Epoch [1/10] - Treinamento: Loss: 1.8343, Accuracy: 15.04%
+           Validação:   Loss: 1.7349, Accuracy: 21.76%
+Epoch [2/10] - Treinamento: Loss: 1.5860, Accuracy: 32.47%
+           Validação:   Loss: 1.5152, Accuracy: 55.53%
+Epoch [3/10] - Treinamento: Loss: 1.3877, Accuracy: 61.13%
+           Validação:   Loss: 1.3369, Accuracy: 75.57%
+Epoch [4/10] - Treinamento: Loss: 1.2297, Accuracy: 72.51%
+           Validação:   Loss: 1.1883, Accuracy: 72.90%
+Epoch [5/10] - Treinamento: Loss: 1.1000, Accuracy: 69.73%
+           Validação:   Loss: 1.0663, Accuracy: 70.61%
+Epoch [6/10] - Treinamento: Loss: 0.9956, Accuracy: 69.24%
+           Validação:   Loss: 0.9700, Accuracy: 70.61%
+Epoch [7/10] - Treinamento: Loss: 0.9135, Accuracy: 69.53%
+           Validação:   Loss: 0.8974, Accuracy: 70.61%
+Epoch [8/10] - Treinamento: Loss: 0.8549, Accuracy: 69.73%
+           Validação:   Loss: 0.8412, Accuracy: 70.80%
+Epoch [9/10] - Treinamento: Loss: 0.7995, Accuracy: 70.17%
+           Validação:   Loss: 0.7974, Accuracy: 70.80%
+Epoch [10/10] - Treinamento: Loss: 0.7601, Accuracy: 70.26%
+           Validação:   Loss: 0.7633, Accuracy: 70.80%
+Modelo salvo em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/pytorch_model.pt
+Torch runtime: 40 seconds
+Running Inference...
+Inference runtime: 2 seconds
+Pipeline total runtime: 248 seconds
