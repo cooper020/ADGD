@@ -112,7 +112,6 @@ def main():
         "PENDING": 6
     }
     
-    print("DEBUG :: 6")
     # Certrificar-se de que as colunas necessárias existem no dataframe
     required_features = ["elapsed", "ntasks", "time_limit", "total_nodes", "total_cpus_job", "state"]
     df = df.dropna(subset=required_features)
@@ -171,7 +170,6 @@ def main():
             loss.backward()
             optimizer.step()
             
-            # Acumular loss e acertos
             epoch_loss += loss.item() * inputs.size(0)
             _, predicted = torch.max(outputs, dim=1)
             total += labels.size(0)

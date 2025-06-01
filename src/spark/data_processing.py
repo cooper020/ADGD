@@ -51,26 +51,21 @@ def expand_all_nodes(nodes_str):
 
     return result
 
-# Registar UDF
 expand_all_nodes_udf = udf(expand_all_nodes, ArrayType(StringType()))
 
-# Vai bsucar a instalação do spark
 findspark.init()
 
 if __name__ == '__main__':
 
-    # 1. Definir argumentos para personalizar por exemplo o período de análise
     parser = argparse.ArgumentParser()
     parser.add_argument("-o", "--outfile", nargs='?', help="outfile")
     parser.add_argument("-p", "--parquet_path", nargs='?', help="Path to save/load Parquet files", default="/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs")
     parser.add_argument("--load_parquet", action="store_true", help="Load data from Parquet instead of JSON")
     args = parser.parse_args()
 
-    # 2. Diretoria onde vamos bucar os json
     DATADIR = '/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/DataSets/PRJ'
     OUTDIR = '/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs'
 
-    # 3. Parâmetros para uma contagem do output 
     params = {
         'Total number of jobs': 0,
         'COMPLETED jobs': 0,
@@ -82,10 +77,8 @@ if __name__ == '__main__':
         'PENDING jobs': 0
     }
 
-    # 4. Criar a sessão spark para processar tudo paralelamente
     sc = SparkSession.builder.master("local[*]").appName('Spark-ADGD').getOrCreate()
 
-    # 5. Carregar os dados para um dataframe
     slurm_nd = sc.read.json(f'{DATADIR}/slurm.json', multiLine=True)
     
     logstash_nd = None
@@ -101,7 +94,6 @@ if __name__ == '__main__':
     
     logstash_nd = logstash_nd.persist(StorageLevel.MEMORY_AND_DISK)
 
-    # Pegar só no que está na coluna source
     slurm_flattened = slurm_nd.select(
         F.col("_source.@end").alias("end"),
         F.col("_source.@queue_wait").alias("queue_wait"),
@@ -126,7 +118,6 @@ if __name__ == '__main__':
         F.col("_source.total_nodes").alias("total_nodes")
     ).persist(StorageLevel.MEMORY_AND_DISK)
 
-    # Pegar só no que está na coluna source
     logstash_flattened = logstash_nd.select(
         F.col("_source.@timestamp").alias("timestamp"),
         F.col("_source.facility").alias("facility"),
@@ -139,7 +130,6 @@ if __name__ == '__main__':
     ).persist(StorageLevel.MEMORY_AND_DISK)
 
     
-    # Converter strings para o formato de tempo do spark
     slurm_flattened = slurm_flattened \
         .withColumn("start_time", F.to_timestamp("start")) \
         .withColumn("end_time", F.to_timestamp("end")) \
@@ -147,11 +137,9 @@ if __name__ == '__main__':
 
     logstash_flattened = logstash_flattened.withColumn("log_time", F.to_timestamp("timestamp"))
     
-    # Reparticionar antes do join para distribuir melhor os dados
     slurm_flattened = slurm_flattened.repartition(100)
     logstash_flattened = logstash_flattened.repartition(100, "host")
 
-    # Juntar os data frames
     job_logs = logstash_flattened.join(
         broadcast(slurm_flattened),
         (F.expr("array_contains(nodes_list, host)")) &
@@ -160,13 +148,11 @@ if __name__ == '__main__':
         "inner"
     )
 
-    # Libertar memória de DataFrames já usados
     logstash_nd.unpersist()
     slurm_flattened.unpersist()
     logstash_flattened.unpersist()
     del logstash_nd, slurm_flattened, logstash_flattened
 
-    # 6. Conta quantos há de cada
     if slurm_nd is not None:
         params['Total number of jobs'] = slurm_nd.count()
         estados = ["COMPLETED", "FAILED", "CANCELLED", "TIMEOUT", "OUT_OF_MEMORY", "NODE_FAIL", "PENDING"]
@@ -177,28 +163,22 @@ if __name__ == '__main__':
     slurm_nd.unpersist()
     del slurm_nd
 
-    # Criar coluna total_cpus_job, que nos revela quantos cpus foram utilizados no total naquele job.
+
     job_logs = job_logs.withColumn("total_cpus_job", F.col("ntasks") * F.col("cpus_per_task"))
 
-    # Eliminar colunas desnecessárias
+
     cols_to_drop = ["facility", "facility_num", "message", "severity", "syslogtag", "cluster", "derived_ec", "std_in", "std_out", "total_cpus", "cpus_per_task"] 
     job_logs = job_logs.drop(*cols_to_drop)
 
     if not args.load_parquet:
-        # Criar diretório de saída se não existir
+
         os.makedirs(args.parquet_path, exist_ok=True)
 
-        # Consolidar partições antes de gravar
-        job_logs_final = job_logs.repartition(10)  # ou um número pequeno como 10
 
-        # Gravação otimizada do job_logs
+        job_logs_final = job_logs.repartition(10) 
+
         job_logs_final.write.mode("overwrite").parquet(f'{args.parquet_path}/job_logs')
 
-        # Log de diagnóstico
-        print(f"Número de partições de job_logs: {job_logs.rdd.getNumPartitions()}")
-        print(f"Total de registros em job_logs: {job_logs.count()}")
-
-    # Gravar parâmetros
     outfilename = args.outfile if args.outfile else "params.tex"
     with open(f"{OUTDIR}/{outfilename}", "w+") as wfile:
         for key, value in params.items():

@@ -10,12 +10,12 @@ import torch
 import torch.nn as nn
 from sklearn.preprocessing import StandardScaler
 
-# Dependências para análise e visualização
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-# --- Definição do Modelo (deve ser idêntico ao utilizado no treinamento) ---
+
 class MLPModel(nn.Module):
     def __init__(self, input_dim, hidden_dim=64, output_dim=7):
         super(MLPModel, self).__init__()
@@ -29,13 +29,7 @@ class MLPModel(nn.Module):
 
 # --- Função de Análise dos Resultados ---
 def analyze_results(csv_path):
-    """
-    Carrega o CSV gerado e analisa as predições.
-    Se existir uma coluna 'state' (ground truth), calcula acurácia, relatório
-    de classificação e plota matriz de confusão.
-    Caso contrário, exibe a distribuição das classes previstas.
-    Retorna um dicionário com métricas (ex.: 'accuracy') para uso na conclusão.
-    """
+ 
     try:
         df = pd.read_csv(csv_path)
     except Exception as e:
@@ -65,7 +59,7 @@ def analyze_results(csv_path):
         y_pred = df["prediction"]
         acc = accuracy_score(y_true, y_pred)
         results["accuracy"] = acc
-        print("Acurácia: {:.2f}%".format(acc * 100))
+        print("Accuracy: {:.2f}%".format(acc * 100))
         print("\nRelatório de Classificação:")
         print(classification_report(y_true, y_pred))
         
@@ -89,18 +83,11 @@ def analyze_results(csv_path):
         results["accuracy"] = None
     return results
 
-# --- Função de Conclusão ---
 def conclude_results(results):
     print("\n--- Conclusões Finais ---")
     if results is not None and results.get("accuracy") is not None:
         acc = results["accuracy"]
         print(f"O modelo obteve uma acurácia geral de {acc*100:.2f}%.")
-        print("A matriz de confusão e o relatório de classificação indicam que há confusões entre")
-        print("determinadas classes, o que sugere a necessidade de aprimoramentos na extração de features")
-        print("ou na arquitetura do modelo.")
-        print("Recomenda-se, para trabalhos futuros, salvar o scaler utilizado no treinamento para garantir")
-        print("que o pré-processamento na inferência seja idêntico e, assim, evitar discrepâncias que possam")
-        print("afetar a performance.")
     else:
         print("Como os rótulos reais não foram fornecidos, não é possível concluir detalhadamente sobre a performance.")
         print("Sugere-se coletar ground truth para uma avaliação mais precisa.")
@@ -120,13 +107,13 @@ def main():
                         help="Caminho para o scaler salvo (opcional)")
     args = parser.parse_args()
     
-    # Lista todos os arquivos Parquet no diretório informado
+
     parquet_files = glob.glob(os.path.join(args.input_dir, "*.parquet"))
     if not parquet_files:
         print("Nenhum arquivo Parquet encontrado no diretório:", args.input_dir)
         return
     
-    # Lê e concatena os arquivos
+
     list_df = []
     for file in parquet_files:
         try:
@@ -147,7 +134,7 @@ def main():
     
     X = df[features].values
 
-    # Pré-processamento: tenta carregar um scaler salvo; se falhar, aplica fit_transform
+    # tenta carregar um scaler salvo; se falhar, aplica fit_transform
     try:
         with open(args.scaler_path, "rb") as f:
             scaler = pickle.load(f)
@@ -158,11 +145,11 @@ def main():
         scaler = StandardScaler()
         X_scaled = scaler.fit_transform(X)
     
-    # Cria o modelo com a mesma arquitetura utilizada no treinamento
+
     input_dim = X.shape[1]
     model = MLPModel(input_dim=input_dim, hidden_dim=64, output_dim=7)
     
-    # Carrega os pesos salvos do modelo
+
     try:
         state_dict = torch.load(args.model_path, map_location=torch.device("cpu"))
         model.load_state_dict(state_dict)
@@ -177,7 +164,7 @@ def main():
         outputs = model(inputs)
         _, predictions = torch.max(outputs, dim=1)
     
-    # Acrescenta a coluna "prediction" e salva o CSV
+
     df["prediction"] = predictions.numpy()
     try:
         df.to_csv(args.output_path, index=False)
@@ -186,10 +173,9 @@ def main():
         print("Erro ao salvar as predições:", e)
         return
 
-    # Realiza a análise dos resultados e extrai métricas
     results = analyze_results(args.output_path)
     
-    # Imprime conclusões baseadas na análise dos resultados
+
     conclude_results(results)
 
 if __name__ == "__main__":
