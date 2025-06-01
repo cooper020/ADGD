@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH --job-name=pipeline_end2end
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --partition=dev-arm
-#SBATCH --account=F202500001HPCVLABEPICUREa
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=48
+#SBATCH --partition=normal-x86
+#SBATCH --account=F202500001HPCVLABEPICUREx
 #SBATCH --time=00:20:00
-#SBATCH --output=pipeline_dev_arm.out
-#SBATCH --error=pipeline_dev_arm.err
+#SBATCH --output=pipeline_nor_x86.out
+#SBATCH --error=pipeline_nor_x86.err
 
 pipeline_start=$(date +%s)
 
@@ -14,17 +14,12 @@ source /share/env/module_select.sh
 module purge
 module spider Python  
 module load "Python/3.12.3-GCCcore-13.3.0"
-module list
+module load "Java/17.0.6"
 
-VENV_DIR=$HOME/venv/arm_torch
-if [ ! -d "$VENV_DIR" ]; then
-  python -m venv "$VENV_DIR"
-fi
-source "$VENV_DIR/bin/activate"
+source /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/env-spark/bin/activate
 
 python -m pip install --upgrade pip setuptools wheel
-python -m pip install torch torchvision \
-   --extra-index-url https://download.pytorch.org/whl/arm64
+python -m pip install torch torchvision  
 python -m pip install pandas scikit-learn tqdm   
 python -m pip install pyarrow fastparquet matplotlib seaborn
 python -m pip install findspark
@@ -39,8 +34,8 @@ head_node_ip=$(srun --nodes=1 --ntasks=1 hostname --ip-address | uniq)
 echo "Head node IP: $head_node_ip"
 
 export WORLD_SIZE=$SLURM_NTASKS
-#  export RANK=$SLURM_PROCID
-#  export LOCAL_RANK=$SLURM_LOCALID
+export RANK=$SLURM_PROCID
+export LOCAL_RANK=$SLURM_LOCALID
 
 export MASTER_ADDR=$head_node_ip
 export MASTER_PORT=29500
@@ -48,20 +43,20 @@ export MASTER_PORT=29500
 export SPARK_HOME="/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/spark-3.5.5-bin-hadoop3"
 export PATH="${SPARK_HOME}/bin:${PATH}"
 
-echo "Running Spark..."
-spark_start=$(date +%s)
-$SPARK_HOME/bin/spark-submit \
-    --master spark://$head_node_ip:7077 \
-    --num-executors 64 \
-    --executor-cores 1 \
-    /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/src/spark/data_processing.py
+#echo "Running Spark..."
+#spark_start=$(date +%s)
+#$SPARK_HOME/bin/spark-submit \
+#    --master spark://$head_node_ip:7077 \
+#    --num-executors 128 \
+#    --executor-cores 1 \
+#    /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/src/spark/data_processing.py
 
-if [ $? -ne 0 ]; then
-    echo "[Pipeline] Spark -> Erro no processamento. Encerrando pipeline."
-    exit 1
-fi
-spark_end=$(date +%s)
-echo "Spark runtime: $((spark_end - spark_start)) seconds"
+#if [ $? -ne 0 ]; then
+#    echo "[Pipeline] Spark -> Erro no processamento. Encerrando pipeline."
+#    exit 1
+#fi
+#spark_end=$(date +%s)
+#echo "Spark runtime: $((spark_end - spark_start)) seconds"
 
 echo "Running Torch..."
 torch_start=$(date +%s)
@@ -78,7 +73,6 @@ srun --nodes=1 --ntasks=1 torchrun \
     --learning_rate 0.001
 torch_end=$(date +%s)
 echo "Torch runtime: $((torch_end - torch_start)) seconds"   
-
 
 echo "Running Inference..."
 inference_start=$(date +%s)
