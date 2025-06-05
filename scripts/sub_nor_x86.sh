@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=pipeline_end2end
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=48
+#SBATCH --ntasks-per-node=1
 #SBATCH --partition=normal-x86
 #SBATCH --account=F202500001HPCVLABEPICUREx
 #SBATCH --time=00:20:00

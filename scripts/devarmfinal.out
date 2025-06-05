@@ -1,0 +1,652 @@
+
+----------------------------------------------------------------------------
+  Python:
+----------------------------------------------------------------------------
+    Description:
+      Python is a programming language that lets you work more quickly and
+      integrate your systems more effectively.
+
+     Versions:
+        Python/2.7.16-GCCcore-8.3.0
+        Python/2.7.18-GCCcore-11.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0
+        Python/3.10.4-GCCcore-11.3.0-bare
+        Python/3.10.4-GCCcore-11.3.0
+        Python/3.11.3-GCCcore-12.3.0
+        Python/3.11.5-GCCcore-13.2.0
+        Python/3.12.3-GCCcore-13.3.0
+     Other possible modules matches:
+        Python-bundle-PyPI  meson-python  protobuf-python
+
+----------------------------------------------------------------------------
+  To find other possible module matches execute:
+
+      $ module -r spider '.*Python.*'
+
+----------------------------------------------------------------------------
+  For detailed information about a specific "Python" package (including how to load the modules) use the module's full name.
+  Note that names that have a trailing (E) are extensions provided by other modules.
+  For example:
+
+     $ module spider Python/3.12.3-GCCcore-13.3.0
+----------------------------------------------------------------------------
+
+ 
+
+
+----------------------------------------------------------------------------
+  Python:
+----------------------------------------------------------------------------
+    Description:
+      Python is a programming language that lets you work more quickly and
+      integrate your systems more effectively.
+
+     Versions:
+        Python/2.7.16-GCCcore-8.3.0
+        Python/2.7.18-GCCcore-11.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0
+        Python/3.10.4-GCCcore-11.3.0-bare
+        Python/3.10.4-GCCcore-11.3.0
+        Python/3.11.3-GCCcore-12.3.0
+        Python/3.11.5-GCCcore-13.2.0
+        Python/3.12.3-GCCcore-13.3.0
+     Other possible modules matches:
+        Python-bundle-PyPI  meson-python  protobuf-python
+
+----------------------------------------------------------------------------
+  To find other possible module matches execute:
+
+      $ module -r spider '.*Python.*'
+
+----------------------------------------------------------------------------
+  For detailed information about a specific "Python" package (including how to load the modules) use the module's full name.
+  Note that names that have a trailing (E) are extensions provided by other modules.
+  For example:
+
+     $ module spider Python/3.12.3-GCCcore-13.3.0
+----------------------------------------------------------------------------
+
+ 
+
+
+Currently Loaded Modules:
+  1) GCCcore/13.3.0                   7) Tcl/8.6.14-GCCcore-13.3.0
+  2) zlib/1.3.1-GCCcore-13.3.0        8) SQLite/3.45.3-GCCcore-13.3.0
+  3) binutils/2.42-GCCcore-13.3.0     9) XZ/5.4.5-GCCcore-13.3.0
+  4) bzip2/1.0.8-GCCcore-13.3.0      10) libffi/3.4.5-GCCcore-13.3.0
+  5) ncurses/6.5-GCCcore-13.3.0      11) OpenSSL/1.1
+  6) libreadline/8.2-GCCcore-13.3.0  12) Python/3.12.3-GCCcore-13.3.0
+
+ 
+
+
+Currently Loaded Modules:
+  1) GCCcore/13.3.0                   7) Tcl/8.6.14-GCCcore-13.3.0
+  2) zlib/1.3.1-GCCcore-13.3.0        8) SQLite/3.45.3-GCCcore-13.3.0
+  3) binutils/2.42-GCCcore-13.3.0     9) XZ/5.4.5-GCCcore-13.3.0
+  4) bzip2/1.0.8-GCCcore-13.3.0      10) libffi/3.4.5-GCCcore-13.3.0
+  5) ncurses/6.5-GCCcore-13.3.0      11) OpenSSL/1.1
+  6) libreadline/8.2-GCCcore-13.3.0  12) Python/3.12.3-GCCcore-13.3.0
+
+ 
+
+
+----------------------------------------------------------------------------
+  Python:
+----------------------------------------------------------------------------
+    Description:
+      Python is a programming language that lets you work more quickly and
+      integrate your systems more effectively.
+
+     Versions:
+        Python/2.7.16-GCCcore-8.3.0
+        Python/2.7.18-GCCcore-11.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0
+        Python/3.10.4-GCCcore-11.3.0-bare
+        Python/3.10.4-GCCcore-11.3.0
+        Python/3.11.3-GCCcore-12.3.0
+        Python/3.11.5-GCCcore-13.2.0
+        Python/3.12.3-GCCcore-13.3.0
+     Other possible modules matches:
+        Python-bundle-PyPI  meson-python  protobuf-python
+
+----------------------------------------------------------------------------
+  To find other possible module matches execute:
+
+      $ module -r spider '.*Python.*'
+
+----------------------------------------------------------------------------
+  For detailed information about a specific "Python" package (including how to load the modules) use the module's full name.
+  Note that names that have a trailing (E) are extensions provided by other modules.
+  For example:
+
+     $ module spider Python/3.12.3-GCCcore-13.3.0
+----------------------------------------------------------------------------
+
+ 
+
+
+----------------------------------------------------------------------------
+  Python:
+----------------------------------------------------------------------------
+    Description:
+      Python is a programming language that lets you work more quickly and
+      integrate your systems more effectively.
+
+     Versions:
+        Python/2.7.16-GCCcore-8.3.0
+        Python/2.7.18-GCCcore-11.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0-bare
+        Python/3.9.5-GCCcore-10.3.0
+        Python/3.10.4-GCCcore-11.3.0-bare
+        Python/3.10.4-GCCcore-11.3.0
+        Python/3.11.3-GCCcore-12.3.0
+        Python/3.11.5-GCCcore-13.2.0
+        Python/3.12.3-GCCcore-13.3.0
+     Other possible modules matches:
+        Python-bundle-PyPI  meson-python  protobuf-python
+
+----------------------------------------------------------------------------
+  To find other possible module matches execute:
+
+      $ module -r spider '.*Python.*'
+
+----------------------------------------------------------------------------
+  For detailed information about a specific "Python" package (including how to load the modules) use the module's full name.
+  Note that names that have a trailing (E) are extensions provided by other modules.
+  For example:
+
+     $ module spider Python/3.12.3-GCCcore-13.3.0
+----------------------------------------------------------------------------
+
+ 
+
+
+Currently Loaded Modules:
+  1) GCCcore/13.3.0                   7) Tcl/8.6.14-GCCcore-13.3.0
+  2) zlib/1.3.1-GCCcore-13.3.0        8) SQLite/3.45.3-GCCcore-13.3.0
+  3) binutils/2.42-GCCcore-13.3.0     9) XZ/5.4.5-GCCcore-13.3.0
+  4) bzip2/1.0.8-GCCcore-13.3.0      10) libffi/3.4.5-GCCcore-13.3.0
+  5) ncurses/6.5-GCCcore-13.3.0      11) OpenSSL/1.1
+  6) libreadline/8.2-GCCcore-13.3.0  12) Python/3.12.3-GCCcore-13.3.0
+
+ 
+
+
+Currently Loaded Modules:
+  1) GCCcore/13.3.0                   7) Tcl/8.6.14-GCCcore-13.3.0
+  2) zlib/1.3.1-GCCcore-13.3.0        8) SQLite/3.45.3-GCCcore-13.3.0
+  3) binutils/2.42-GCCcore-13.3.0     9) XZ/5.4.5-GCCcore-13.3.0
+  4) bzip2/1.0.8-GCCcore-13.3.0      10) libffi/3.4.5-GCCcore-13.3.0
+  5) ncurses/6.5-GCCcore-13.3.0      11) OpenSSL/1.1
+  6) libreadline/8.2-GCCcore-13.3.0  12) Python/3.12.3-GCCcore-13.3.0
+
+ 
+
+Requirement already satisfied: pip in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (25.1.1)
+Requirement already satisfied: pip in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (25.1.1)
+Requirement already satisfied: setuptools in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (80.9.0)
+Requirement already satisfied: setuptools in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (80.9.0)
+Requirement already satisfied: wheel in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.45.1)
+Requirement already satisfied: wheel in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.45.1)
+Requirement already satisfied: pip in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (25.1.1)
+Requirement already satisfied: pip in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (25.1.1)
+Requirement already satisfied: setuptools in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (80.9.0)
+Requirement already satisfied: setuptools in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (80.9.0)
+Requirement already satisfied: wheel in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.45.1)
+Requirement already satisfied: wheel in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.45.1)
+Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/arm64
+Requirement already satisfied: torch in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.7.0)
+Requirement already satisfied: torchvision in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.22.0)
+Requirement already satisfied: filelock in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.18.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (4.13.2)
+Requirement already satisfied: setuptools in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (80.9.0)
+Requirement already satisfied: sympy>=1.13.3 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.5)
+Requirement already satisfied: jinja2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (2025.5.1)
+Requirement already satisfied: numpy in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torchvision) (2.2.6)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torchvision) (11.2.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from jinja2->torch) (3.0.2)
+Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/arm64
+Requirement already satisfied: torch in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.7.0)
+Requirement already satisfied: torchvision in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.22.0)
+Requirement already satisfied: filelock in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.18.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (4.13.2)
+Requirement already satisfied: setuptools in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (80.9.0)
+Requirement already satisfied: sympy>=1.13.3 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.5)
+Requirement already satisfied: jinja2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (2025.5.1)
+Requirement already satisfied: numpy in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torchvision) (2.2.6)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torchvision) (11.2.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from jinja2->torch) (3.0.2)
+Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/arm64
+Requirement already satisfied: torch in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.7.0)
+Requirement already satisfied: torchvision in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.22.0)
+Requirement already satisfied: filelock in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.18.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (4.13.2)
+Requirement already satisfied: setuptools in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (80.9.0)
+Requirement already satisfied: sympy>=1.13.3 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.5)
+Requirement already satisfied: jinja2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (2025.5.1)
+Requirement already satisfied: numpy in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torchvision) (2.2.6)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torchvision) (11.2.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from jinja2->torch) (3.0.2)
+Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/arm64
+Requirement already satisfied: torch in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.7.0)
+Requirement already satisfied: torchvision in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.22.0)
+Requirement already satisfied: filelock in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.18.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (4.13.2)
+Requirement already satisfied: setuptools in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (80.9.0)
+Requirement already satisfied: sympy>=1.13.3 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.5)
+Requirement already satisfied: jinja2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torch) (2025.5.1)
+Requirement already satisfied: numpy in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torchvision) (2.2.6)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from torchvision) (11.2.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from jinja2->torch) (3.0.2)
+Requirement already satisfied: pandas in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.2.3)
+Requirement already satisfied: scikit-learn in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (1.6.1)
+Requirement already satisfied: tqdm in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (4.67.1)
+Requirement already satisfied: numpy>=1.26.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2.2.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: scipy>=1.6.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (1.15.3)
+Requirement already satisfied: joblib>=1.2.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (1.5.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: pandas in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.2.3)
+Requirement already satisfied: scikit-learn in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (1.6.1)
+Requirement already satisfied: tqdm in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (4.67.1)
+Requirement already satisfied: numpy>=1.26.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2.2.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: scipy>=1.6.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (1.15.3)
+Requirement already satisfied: joblib>=1.2.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (1.5.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: pandas in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.2.3)
+Requirement already satisfied: scikit-learn in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (1.6.1)
+Requirement already satisfied: tqdm in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (4.67.1)
+Requirement already satisfied: numpy>=1.26.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2.2.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: scipy>=1.6.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (1.15.3)
+Requirement already satisfied: joblib>=1.2.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (1.5.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: pandas in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.2.3)
+Requirement already satisfied: scikit-learn in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (1.6.1)
+Requirement already satisfied: tqdm in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (4.67.1)
+Requirement already satisfied: numpy>=1.26.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2.2.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: scipy>=1.6.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (1.15.3)
+Requirement already satisfied: joblib>=1.2.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (1.5.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: pyarrow in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (20.0.0)
+Requirement already satisfied: fastparquet in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2024.11.0)
+Requirement already satisfied: matplotlib in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (3.10.3)
+Requirement already satisfied: seaborn in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.13.2)
+Requirement already satisfied: pandas>=1.5.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.2.3)
+Requirement already satisfied: numpy in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.2.6)
+Requirement already satisfied: cramjam>=2.3 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.10.0)
+Requirement already satisfied: fsspec in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2025.5.1)
+Requirement already satisfied: packaging in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (25.0)
+Requirement already satisfied: contourpy>=1.0.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (4.58.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (1.4.8)
+Requirement already satisfied: pillow>=8 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2025.2)
+Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+Requirement already satisfied: pyarrow in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (20.0.0)
+Requirement already satisfied: fastparquet in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2024.11.0)
+Requirement already satisfied: matplotlib in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (3.10.3)
+Requirement already satisfied: seaborn in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.13.2)
+Requirement already satisfied: pandas>=1.5.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.2.3)
+Requirement already satisfied: numpy in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.2.6)
+Requirement already satisfied: cramjam>=2.3 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.10.0)
+Requirement already satisfied: fsspec in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2025.5.1)
+Requirement already satisfied: packaging in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (25.0)
+Requirement already satisfied: contourpy>=1.0.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (4.58.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (1.4.8)
+Requirement already satisfied: pillow>=8 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2025.2)
+Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+Requirement already satisfied: pyarrow in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (20.0.0)
+Requirement already satisfied: fastparquet in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2024.11.0)
+Requirement already satisfied: matplotlib in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (3.10.3)
+Requirement already satisfied: seaborn in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.13.2)
+Requirement already satisfied: pandas>=1.5.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.2.3)
+Requirement already satisfied: numpy in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.2.6)
+Requirement already satisfied: cramjam>=2.3 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.10.0)
+Requirement already satisfied: fsspec in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2025.5.1)
+Requirement already satisfied: packaging in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (25.0)
+Requirement already satisfied: contourpy>=1.0.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (4.58.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (1.4.8)
+Requirement already satisfied: pillow>=8 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2025.2)
+Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+Requirement already satisfied: pyarrow in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (20.0.0)
+Requirement already satisfied: fastparquet in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2024.11.0)
+Requirement already satisfied: matplotlib in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (3.10.3)
+Requirement already satisfied: seaborn in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (0.13.2)
+Requirement already satisfied: pandas>=1.5.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.2.3)
+Requirement already satisfied: numpy in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.2.6)
+Requirement already satisfied: cramjam>=2.3 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2.10.0)
+Requirement already satisfied: fsspec in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (2025.5.1)
+Requirement already satisfied: packaging in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from fastparquet) (25.0)
+Requirement already satisfied: contourpy>=1.0.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (4.58.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (1.4.8)
+Requirement already satisfied: pillow>=8 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (11.2.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (3.2.3)
+Requirement already satisfied: python-dateutil>=2.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pandas>=1.5.0->fastparquet) (2025.2)
+Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+Requirement already satisfied: findspark in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.0.1)
+Requirement already satisfied: findspark in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.0.1)
+Requirement already satisfied: findspark in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.0.1)
+Requirement already satisfied: findspark in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.0.1)
+Requirement already satisfied: pyspark in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (4.0.0)
+Requirement already satisfied: py4j==0.10.9.9 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pyspark) (0.10.9.9)
+SJN: cna0003
+Nodes: cna0003
+Head node IP: 10.1.1.3
+Running Spark...
+Requirement already satisfied: pyspark in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (4.0.0)
+Requirement already satisfied: py4j==0.10.9.9 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pyspark) (0.10.9.9)
+Requirement already satisfied: pyspark in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (4.0.0)
+Requirement already satisfied: py4j==0.10.9.9 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pyspark) (0.10.9.9)
+SJN: cna0001
+Nodes: cna0001
+Head node IP: 10.1.1.1
+Running Spark...
+SJN: cna0004
+Nodes: cna0004
+Requirement already satisfied: pyspark in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (4.0.0)
+Requirement already satisfied: py4j==0.10.9.9 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pyspark) (0.10.9.9)
+Head node IP: 10.1.1.4
+Running Spark...
+SJN: cna0005
+Nodes: cna0005
+Head node IP: 10.1.1.5
+Running Spark...
+Resultados escritos em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/params.tex
+Traceback (most recent call last):
+  File "/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/src/spark/data_processing.py", line 180, in <module>
+    job_logs_final.write.mode("overwrite").parquet(f'{args.parquet_path}/job_logs')
+  File "/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/spark-3.5.5-bin-hadoop3/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 1721, in parquet
+  File "/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/spark-3.5.5-bin-hadoop3/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/spark-3.5.5-bin-hadoop3/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+  File "/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/spark-3.5.5-bin-hadoop3/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o580.parquet.
+: java.io.FileNotFoundException: File file:/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/job_logs/_temporary/0 does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.listStatus(RawLocalFileSystem.java:597)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1972)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:2014)
+	at org.apache.hadoop.fs.ChecksumFileSystem.listStatus(ChecksumFileSystem.java:761)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1972)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:2014)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.getAllCommittedTaskPaths(FileOutputCommitter.java:334)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.commitJobInternal(FileOutputCommitter.java:404)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.commitJob(FileOutputCommitter.java:377)
+	at org.apache.parquet.hadoop.ParquetOutputCommitter.commitJob(ParquetOutputCommitter.java:48)
+	at org.apache.spark.internal.io.HadoopMapReduceCommitProtocol.commitJob(HadoopMapReduceCommitProtocol.scala:192)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$writeAndCommit$3(FileFormatWriter.scala:275)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:552)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.writeAndCommit(FileFormatWriter.scala:275)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeWrite(FileFormatWriter.scala:304)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:190)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:190)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$executeCollect$1(AdaptiveSparkPlanExec.scala:392)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.withFinalPlanUpdate(AdaptiveSparkPlanExec.scala:420)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.executeCollect(AdaptiveSparkPlanExec.scala:392)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:869)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:391)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:364)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:243)
+	at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:802)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:748)
+
+[Pipeline] Spark -> Erro no processamento. Encerrando pipeline.
+Spark runtime: 528 seconds
+Running Torch...
+Traceback (most recent call last):
+  File "/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/src/spark/data_processing.py", line 180, in <module>
+    job_logs_final.write.mode("overwrite").parquet(f'{args.parquet_path}/job_logs')
+  File "/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/spark-3.5.5-bin-hadoop3/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 1721, in parquet
+  File "/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/spark-3.5.5-bin-hadoop3/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/spark-3.5.5-bin-hadoop3/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+  File "/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/spark-3.5.5-bin-hadoop3/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o580.parquet.
+: java.io.FileNotFoundException: File file:/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/job_logs/_temporary/0 does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.listStatus(RawLocalFileSystem.java:597)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1972)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:2014)
+	at org.apache.hadoop.fs.ChecksumFileSystem.listStatus(ChecksumFileSystem.java:761)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1972)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:2014)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.getAllCommittedTaskPaths(FileOutputCommitter.java:334)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.commitJobInternal(FileOutputCommitter.java:404)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.commitJob(FileOutputCommitter.java:377)
+	at org.apache.parquet.hadoop.ParquetOutputCommitter.commitJob(ParquetOutputCommitter.java:48)
+	at org.apache.spark.internal.io.HadoopMapReduceCommitProtocol.commitJob(HadoopMapReduceCommitProtocol.scala:192)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$writeAndCommit$3(FileFormatWriter.scala:275)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.timeTakenMs(Utils.scala:552)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.writeAndCommit(FileFormatWriter.scala:275)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeWrite(FileFormatWriter.scala:304)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:190)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:190)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$executeCollect$1(AdaptiveSparkPlanExec.scala:392)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.withFinalPlanUpdate(AdaptiveSparkPlanExec.scala:420)
+	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.executeCollect(AdaptiveSparkPlanExec.scala:392)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:869)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:391)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:364)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:243)
+	at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:802)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.lang.Thread.run(Thread.java:748)
+
+[Pipeline] Spark -> Erro no processamento. Encerrando pipeline.
+Resultados escritos em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/params.tex
+Spark runtime: 544 seconds
+Running Torch...
+Epoch [1/10] - Treinamento: Loss: 1.8101, Accuracy: 29.49%
+           Validação:   Loss: 1.7264, Accuracy: 54.58%
+Epoch [2/10] - Treinamento: Loss: 1.5718, Accuracy: 62.01%
+           Validação:   Loss: 1.5055, Accuracy: 63.74%
+Epoch [3/10] - Treinamento: Loss: 1.3686, Accuracy: 63.82%
+           Validação:   Loss: 1.3181, Accuracy: 63.74%
+Epoch [4/10] - Treinamento: Loss: 1.2058, Accuracy: 63.57%
+           Validação:   Loss: 1.1599, Accuracy: 63.74%
+Epoch [5/10] - Treinamento: Loss: 1.0693, Accuracy: 63.82%
+           Validação:   Loss: 1.0344, Accuracy: 63.93%
+Epoch [6/10] - Treinamento: Loss: 0.9632, Accuracy: 63.92%
+           Validação:   Loss: 0.9378, Accuracy: 63.93%
+Epoch [7/10] - Treinamento: Loss: 0.8843, Accuracy: 68.46%
+           Validação:   Loss: 0.8665, Accuracy: 70.42%
+Epoch [8/10] - Treinamento: Loss: 0.8286, Accuracy: 69.63%
+           Validação:   Loss: 0.8118, Accuracy: 70.23%
+Epoch [9/10] - Treinamento: Loss: 0.7759, Accuracy: 71.39%
+           Validação:   Loss: 0.7692, Accuracy: 72.90%
+Epoch [10/10] - Treinamento: Loss: 0.7360, Accuracy: 72.27%
+           Validação:   Loss: 0.7364, Accuracy: 72.90%
+Modelo salvo em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/pytorch_model.pt
+Torch runtime: 283 seconds
+Running Inference...
+Epoch [1/10] - Treinamento: Loss: 1.7905, Accuracy: 17.72%
+           Validação:   Loss: 1.6955, Accuracy: 31.49%
+Epoch [2/10] - Treinamento: Loss: 1.5299, Accuracy: 46.34%
+           Validação:   Loss: 1.4616, Accuracy: 62.79%
+Epoch [3/10] - Treinamento: Loss: 1.3259, Accuracy: 69.19%
+           Validação:   Loss: 1.2791, Accuracy: 71.37%
+Epoch [4/10] - Treinamento: Loss: 1.1722, Accuracy: 70.70%
+           Validação:   Loss: 1.1352, Accuracy: 71.37%
+Epoch [5/10] - Treinamento: Loss: 1.0527, Accuracy: 70.95%
+           Validação:   Loss: 1.0245, Accuracy: 72.33%
+Epoch [6/10] - Treinamento: Loss: 0.9597, Accuracy: 71.09%
+           Validação:   Loss: 0.9375, Accuracy: 73.09%
+Epoch [7/10] - Treinamento: Loss: 0.8870, Accuracy: 71.83%
+           Validação:   Loss: 0.8703, Accuracy: 72.52%
+Epoch [8/10] - Treinamento: Loss: 0.8337, Accuracy: 72.02%
+           Validação:   Loss: 0.8174, Accuracy: 72.71%
+Epoch [9/10] - Treinamento: Loss: 0.7820, Accuracy: 72.46%
+           Validação:   Loss: 0.7755, Accuracy: 73.09%
+Epoch [10/10] - Treinamento: Loss: 0.7430, Accuracy: 72.90%
+           Validação:   Loss: 0.7429, Accuracy: 73.09%
+Modelo salvo em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/pytorch_model.pt
+Torch runtime: 284 seconds
+Running Inference...
+Não foi possível carregar o scaler ([Errno 2] No such file or directory: '/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/scaler.pkl'). Usando fit_transform nos dados de inferência.
+Modelo carregado de /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/pytorch_model.pt
+Previsões salvas em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/predictions.csv
+
+--- Análise de Resultados ---
+Accuracy: 72.60%
+
+Relatório de Classificação:
+              precision    recall  f1-score   support
+
+           0       0.69      0.84      0.76      1312
+           1       0.71      0.87      0.78       231
+           2       0.00      0.00      0.00       314
+           3       0.81      0.88      0.85       674
+           5       0.00      0.00      0.00        89
+
+    accuracy                           0.73      2620
+   macro avg       0.44      0.52      0.48      2620
+weighted avg       0.62      0.73      0.67      2620
+
+
+--- Conclusões Finais ---
+O modelo obteve uma acurácia geral de 72.60%.
+Inference runtime: 115 seconds
+Pipeline total runtime: 1016 seconds
+Não foi possível carregar o scaler ([Errno 2] No such file or directory: '/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/scaler.pkl'). Usando fit_transform nos dados de inferência.
+Modelo carregado de /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/pytorch_model.pt
+Previsões salvas em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/predictions.csv
+
+--- Análise de Resultados ---
+Accuracy: 72.60%
+
+Relatório de Classificação:
+              precision    recall  f1-score   support
+
+           0       0.69      0.84      0.76      1312
+           1       0.71      0.87      0.78       231
+           2       0.00      0.00      0.00       314
+           3       0.81      0.88      0.85       674
+           5       0.00      0.00      0.00        89
+
+    accuracy                           0.73      2620
+   macro avg       0.44      0.52      0.48      2620
+weighted avg       0.62      0.73      0.67      2620
+
+
+--- Conclusões Finais ---
+O modelo obteve uma acurácia geral de 72.60%.
+Inference runtime: 117 seconds
+Pipeline total runtime: 1035 seconds

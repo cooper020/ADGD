@@ -95,58 +95,12 @@ Requirement already satisfied: six>=1.5 in /home/mca57876/venv/arm_torch/lib/pyt
 Requirement already satisfied: findspark in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (2.0.1)
 Requirement already satisfied: pyspark in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (4.0.0)
 Requirement already satisfied: py4j==0.10.9.9 in /home/mca57876/venv/arm_torch/lib/python3.12/site-packages (from pyspark) (0.10.9.9)
-SJN: cna0001
-Nodes: cna0001
+SJN: cna[0001-0002]
+Nodes: cna0001 cna0002
 Head node IP: 10.1.1.1
 Running Spark...
 Resultados escritos em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/params.tex
-Spark runtime: 342 seconds
+Spark runtime: 350 seconds
 Running Torch...
-Epoch [1/10] - Treinamento: Loss: 1.6610, Accuracy: 54.25%
-           Validação:   Loss: 1.5522, Accuracy: 75.19%
-Epoch [2/10] - Treinamento: Loss: 1.4060, Accuracy: 72.66%
-           Validação:   Loss: 1.3277, Accuracy: 72.90%
-Epoch [3/10] - Treinamento: Loss: 1.2150, Accuracy: 72.22%
-           Validação:   Loss: 1.1632, Accuracy: 72.90%
-Epoch [4/10] - Treinamento: Loss: 1.0797, Accuracy: 71.00%
-           Validação:   Loss: 1.0393, Accuracy: 70.04%
-Epoch [5/10] - Treinamento: Loss: 0.9790, Accuracy: 69.24%
-           Validação:   Loss: 0.9482, Accuracy: 72.33%
-Epoch [6/10] - Treinamento: Loss: 0.9008, Accuracy: 71.34%
-           Validação:   Loss: 0.8787, Accuracy: 72.90%
-Epoch [7/10] - Treinamento: Loss: 0.8427, Accuracy: 72.46%
-           Validação:   Loss: 0.8266, Accuracy: 75.19%
-Epoch [8/10] - Treinamento: Loss: 0.8003, Accuracy: 74.51%
-           Validação:   Loss: 0.7845, Accuracy: 75.19%
-Epoch [9/10] - Treinamento: Loss: 0.7568, Accuracy: 74.90%
-           Validação:   Loss: 0.7507, Accuracy: 75.19%
-Epoch [10/10] - Treinamento: Loss: 0.7236, Accuracy: 74.90%
-           Validação:   Loss: 0.7243, Accuracy: 75.19%
-Modelo salvo em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/pytorch_model.pt
-Torch runtime: 273 seconds
+Torch runtime: 673 seconds
 Running Inference...
-Não foi possível carregar o scaler ([Errno 2] No such file or directory: '/projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/scaler.pkl'). Usando fit_transform nos dados de inferência.
-Modelo carregado de /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/pytorch_model.pt
-Previsões salvas em /projects/F202500001HPCVLABEPICURE/mca57876/ADGD_/ADGD/outputs/predictions.csv
-
---- Análise de Resultados ---
-Accuracy: 74.66%
-
-Relatório de Classificação:
-              precision    recall  f1-score   support
-
-           0       0.71      0.84      0.77      1312
-           1       0.71      0.87      0.78       231
-           2       0.00      0.00      0.00       314
-           3       0.82      0.96      0.89       674
-           5       0.00      0.00      0.00        89
-
-    accuracy                           0.75      2620
-   macro avg       0.45      0.54      0.49      2620
-weighted avg       0.63      0.75      0.68      2620
-
-
---- Conclusões Finais ---
-O modelo obteve uma acurácia geral de 74.66%.
-Inference runtime: 114 seconds
-Pipeline total runtime: 811 seconds

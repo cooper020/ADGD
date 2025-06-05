@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=pipeline_end2end
-#SBATCH --nodes=1
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=1
 #SBATCH --partition=dev-arm
 #SBATCH --account=F202500001HPCVLABEPICUREa
